@@ -14,7 +14,7 @@ type Element struct {
 	next  *Element
 }
 
-func NewStack() *Stack {
+func New() *Stack {
 	return &Stack{top: nil, size: 0}
 }
 

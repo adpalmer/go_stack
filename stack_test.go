@@ -3,7 +3,7 @@ package stack
 import "testing"
 
 func TestEmpty(t *testing.T) {
-	s := NewStack()
+	s := New()
 	if s.Empty() == false {
 		t.Error("Stack should be empty")
 	}
@@ -18,7 +18,7 @@ func TestEmpty(t *testing.T) {
 }
 
 func TestLen(t *testing.T) {
-	s := NewStack()
+	s := New()
 
 	// Test that s.Len() is incremented as items pushed
 	for i := 0; i < 10; i++ {
@@ -42,7 +42,7 @@ func TestLen(t *testing.T) {
 }
 
 func TestPush(t *testing.T) {
-	s := NewStack()
+	s := New()
 	err := s.Push(10)
 	if err != nil {
 		t.Errorf("Stack Push error: %s", err)
@@ -54,7 +54,7 @@ func TestPush(t *testing.T) {
 }
 
 func TestPop(t *testing.T) {
-	s := NewStack()
+	s := New()
 	v1 := 10
 	v2 := 11
 
